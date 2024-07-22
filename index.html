@@ -1,3 +1,64 @@
-<html>
-<h1> This is a new Github Page </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Example</title>
+<style>
+    /* Style for popup container */
+    .popup {
+        display: none; /* Hidden by default */
+        position: fixed; /* Positioning context for modal */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Centering trick */
+        background-color: #fefefe;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 400px; /* Adjust as per your content */
+        z-index: 999; /* Ensure it appears on top */
+    }
+
+    /* Close button style */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<!-- Button to trigger the popup -->
+<button onclick="openPopup()">Open Popup</button>
+
+<!-- Popup container -->
+<div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>Popup Content</h2>
+    <p>You have been Hacked .</p>
+</div>
+
+<script>
+    // Function to open popup
+    function openPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    // Function to close popup
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+</body>
 </html>
